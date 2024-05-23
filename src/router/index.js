@@ -17,6 +17,13 @@ const router = createRouter({
       component: Layout,
       children: [...menus]
     },
+    // 404页面路由
+    {
+      path: '/:pathMatch',
+      name: 'NotFound',
+      component: () => import('@/views/NotFound/index.vue'),
+      meta: {title: '页面飞走了'}
+    }
   ]
 })
 

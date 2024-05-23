@@ -25,6 +25,7 @@ const disabled = computed(() => {
       @finish="onFinish"
       @finishFailed="onFinishFailed"
     >
+      <a-form-item><span class="title">登录账号</span></a-form-item>
       <a-form-item
         name="username"
         :rules="[{ required: true, message: '请输入用户名!' }]"
@@ -48,6 +49,7 @@ const disabled = computed(() => {
       </a-form-item>
 
       <a-form-item>
+        <a class="login-form-register" href="">没有账号？去注册</a>
         <a class="login-form-forgot" href="">忘记密码</a>
       </a-form-item>
 
@@ -55,8 +57,6 @@ const disabled = computed(() => {
         <a-button :disabled="disabled" type="primary" html-type="submit" class="login-form-button">
           登录
         </a-button>
-        Or
-        <a href="">去注册!</a>
       </a-form-item>
     </a-form>
   </div>
@@ -81,6 +81,10 @@ const disabled = computed(() => {
   margin: auto;
   justify-content: center;
   padding: 50px 60px 20px;
+}
+
+.title {
+  font-size: 20px;
 }
 
 .login-form-forgot {
